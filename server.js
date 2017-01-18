@@ -133,6 +133,7 @@ function runServer(databaseUrl=DATABASE_URL, port=PORT) {
   });
 }
 
+
 function closeServer() {
   return mongoose.disconnect().then(() => {
      return new Promise((resolve, reject) => {
@@ -146,7 +147,6 @@ function closeServer() {
      });
   });
 }
-
 
 if (require.main === module) {
   runServer().catch(err => console.error(err));
